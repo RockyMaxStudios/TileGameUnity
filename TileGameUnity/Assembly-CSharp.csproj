@@ -46,6 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Alli&apos;s Assets\LoadSceneE.cs" />
+     <Compile Include="Assets\Alli&apos;s Assets\LoadSceneH.cs" />
+     <Compile Include="Assets\Alli&apos;s Assets\LoadSceneM.cs" />
      <Compile Include="Assets\SharedAssets\LoadScene1.cs" />
      <Compile Include="Assets\SharedAssets\LoadScene2.cs" />
      <Compile Include="Assets\SharedAssets\LoadScene3.cs" />
