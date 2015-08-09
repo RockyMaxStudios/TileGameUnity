@@ -54,6 +54,7 @@
      <Compile Include="Assets\SharedAssets\LoadScene2.cs" />
      <Compile Include="Assets\SharedAssets\LoadScene3.cs" />
      <Compile Include="Assets\StephensAssets\GenerateGrid.cs" />
+     <Compile Include="Assets\StephensAssets\MemoryGame.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
