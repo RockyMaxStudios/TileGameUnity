@@ -14,11 +14,16 @@ public class MemoryGame : MonoBehaviour
 
     void Update()
     {
+        CheckClick();
+    }
+
+    private void CheckClick()
+    {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Ray clickRay = cameraComponent.ScreenPointToRay(Input.mousePosition);
             RaycastHit rayHitInfo;
-            
+
             if (Physics.Raycast(clickRay, out rayHitInfo))
             {
                 foreach (Transform plane in generateGrid.planes)
