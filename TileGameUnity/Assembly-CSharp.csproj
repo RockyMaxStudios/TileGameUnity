@@ -50,6 +50,7 @@
      <Compile Include="Assets\Alli&apos;s Assets\LoadSceneH.cs" />
      <Compile Include="Assets\Alli&apos;s Assets\LoadSceneM.cs" />
      <Compile Include="Assets\Andrew&apos;sAssets\GenerateGridAP.cs" />
+     <Compile Include="Assets\Andrew&apos;sAssets\SLGenerateGrid.cs" />
      <Compile Include="Assets\SharedAssets\LoadScene1.cs" />
      <Compile Include="Assets\SharedAssets\LoadScene2.cs" />
      <Compile Include="Assets\SharedAssets\LoadScene3.cs" />

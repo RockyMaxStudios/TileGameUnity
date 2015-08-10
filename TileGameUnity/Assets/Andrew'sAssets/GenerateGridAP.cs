@@ -26,6 +26,7 @@ public class GenerateGridAP : MonoBehaviour {
 			for (int j = 0; j< noCols; j++) {
 				GameObject square = new GameObject ("square-" + i + "-" + j, typeof(Plane));
 				square.transform.parent = GameObject.Find ("GamePanel").transform;
+				square.AddComponent<MeshFilter> ();
 				square.AddComponent<MeshRenderer> ();
 				square.AddComponent<MeshCollider> ();
 				square.AddComponent<UnityEngine.UI.Image> ();
