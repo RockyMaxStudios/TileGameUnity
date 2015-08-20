@@ -10,6 +10,7 @@ public class GenerateGridAP : MonoBehaviour {
 	private int screenHeight;
 	[HideInInspector] public List<Transform> planes = new List<Transform>();
 	Camera cameraComponent;
+	private GameState gameState;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +18,17 @@ public class GenerateGridAP : MonoBehaviour {
 		var sceneCamera = GameObject.Find ("Main Camera");
 		screenWidth = sceneCamera.GetComponent<Camera> ().pixelWidth;
 		screenHeight = sceneCamera.GetComponent<Camera> ().pixelHeight;
+		Player player = new Player (1);
+		gameState = new GameState (noRows, noCols);
 
 		cameraComponent = GameObject.Find("Main Camera").GetComponent<Camera>();
+		GameObject backgroundPanel = GameObject.CreatePrimitive(PrimitiveType.Plane);
+		backgroundPanel.transform.localScale = new Vector3(1,1,1);
+		backgroundPanel.transform.localPosition = new Vector3(0,0,10);
+		backgroundPanel.transform.parent = GameObject.Find("GamePanel").transform;
+		backgroundPanel.GetComponent<Renderer>().material.color = new Color(0, 0, 0);
+		backgroundPanel.transform.rotation = Quaternion.Euler(new Vector3(270, 0, 0));
+
 
 		float squareSize = 47;
 
@@ -69,6 +79,9 @@ public class GenerateGridAP : MonoBehaviour {
 				{
 					if (rayHitInfo.collider.gameObject.transform == plane)
 					{
+						string rowNo = plane.name.Split('-')[2];
+						string colNo = plane.name.Split('-')[1];
+						gameState.AddClick(int.Parse(rowNo), int.Parse (colNo));
 						plane.GetComponent<Renderer>().material.color = new Color(0, 0, 0);
 					}
 				}
